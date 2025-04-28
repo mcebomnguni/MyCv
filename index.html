@@ -1,205 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mcebo Mnguni - Junior Software Engineer</title>
   <style>
-    /* Reset some default styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #2c2c2c;
+      line-height: 1.7;
     }
-    
-    /* Container for the whole CV */
+
     .container {
-      width: 80%;
+      width: 85%;
       max-width: 1000px;
       margin: 40px auto;
-      padding: 30px;
       background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
-    
-    /* Header and Footer Styling */
+
     header, footer {
-      background-color: #333;
+      background-color: #000;
       color: #fff;
-      padding: 30px 0;
       text-align: center;
-      border-radius: 15px;
+      padding: 40px 20px;
+      border-radius: 10px;
     }
 
     header img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 4px solid #fff;
       margin-bottom: 20px;
     }
-    
+
     header h1 {
-      font-size: 3.2em;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      margin: 10px 0;
-    }
-    
-    header p {
-      font-size: 1.4em;
-      font-weight: 300;
-      margin: 5px 0;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    footer p {
-      font-size: 1em;
-      margin-top: 20px;
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.85;
     }
-    
-    /* Section Titles */
+
     .section-title {
-      font-size: 2.2em;
-      color: #333;
+      font-size: 1.8rem;
       font-weight: 600;
-      margin-bottom: 20px;
-      position: relative;
-    }
-    
-    .section-title::after {
-      content: "";
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 60%;
-      height: 3px;
-      background-color: #333;
-    }
-    
-    /* Section Content Styling */
-    .section-content {
-      margin-bottom: 40px;
+      margin: 40px 0 15px;
+      border-bottom: 3px solid #000;
+      display: inline-block;
     }
 
     .section-content ul {
-      list-style: none;
-      padding-left: 0;
+      list-style-type: disc;
+      padding-left: 25px;
     }
 
-    .section-content ul li {
-      font-size: 1.2em;
-      margin: 12px 0;
-      color: #555;
-      line-height: 1.8;
-    }
-    
-    .section-content a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .section-content a:hover {
-      color: #000;
-    }
-
+    .section-content ul li,
     .section-content p {
-      font-size: 1.1em;
-      color: #555;
+      font-size: 1.1rem;
+      margin: 12px 0;
+      color: #333;
     }
-    
-    /* Contact Information */
+
     .contact-info p {
-      font-size: 1.2em;
-      color: #555;
       margin: 10px 0;
+      font-size: 1.1rem;
     }
 
     .contact-info a {
-      color: #fff;
+      color: #111;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     .contact-info a:hover {
+      color: #555;
       text-decoration: underline;
-    }
-
-    /* Experience Section */
-    .experience-item h4, .education-item h4 {
-      font-size: 1.6em;
-      color: #333;
-      font-weight: 600;
-    }
-
-    .experience-item p, .education-item p {
-      font-size: 1.2em;
-      color: #666;
-    }
-
-    /* Links to projects and social profiles */
-    .project, .social-links {
-      font-size: 1.1em;
-      color: #333;
-      margin: 12px 0;
     }
 
     .project a {
-      color: #1d72b8;
-      font-weight: 600;
+      color: #111;
       text-decoration: none;
+      font-weight: 600;
     }
 
     .project a:hover {
+      color: #000;
       text-decoration: underline;
     }
-    
-    /* Responsive Design */
+
+    .experience-item h4,
+    .education-item h4,
+    .project h4 {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .experience-item p,
+    .education-item p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
     @media (max-width: 768px) {
       .container {
-        width: 90%;
+        width: 95%;
+        padding: 20px;
       }
 
       header h1 {
-        font-size: 2.5em;
-      }
-
-      header p {
-        font-size: 1.2em;
+        font-size: 2.2rem;
       }
 
       .section-title {
-        font-size: 1.8em;
-      }
-
-      .section-content ul li {
-        font-size: 1.1em;
+        font-size: 1.5rem;
       }
     }
-
   </style>
 </head>
 <body>
-
   <div class="container">
-    <!-- Header Section -->
     <header>
       <img src="image.jpg" alt="Mcebo Mnguni">
       <h1>Mcebo Mnguni</h1>
       <p>Junior Software Engineer | Problem Solver | Passionate Developer</p>
     </header>
 
-    <!-- Contact Information Section -->
     <section class="contact-info">
       <div class="section-title">Contact Information</div>
       <p>Location: Johannesburg, Gauteng</p>
@@ -210,95 +158,93 @@
       <p>Portfolio: <a href="https://mcebomnguni.github.io/my-bank-app/" target="_blank">Visit Portfolio</a></p>
     </section>
 
-    <!-- Skills Section -->
     <section class="skills">
       <div class="section-title">Core Competencies</div>
       <div class="section-content">
         <ul>
-          <li>Proficient in full-stack development using Python, Django, SQL/SQLite, HTML, CSS, and JavaScript</li>
-          <li>Experienced in building scalable and efficient applications with Docker and version control via Git</li>
-          <li>Skilled in working with relational databases and optimizing queries for fast data retrieval</li>
-          <li>Proficient in web development using frameworks like Django and Bootstrap for responsive design</li>
+          <li>Full-stack development with Python, Django, HTML, CSS, JavaScript, SQL/SQLite</li>
+          <li>Efficient containerization and deployment using Docker</li>
+          <li>Version control with Git and GitHub</li>
+          <li>Responsive web design with Bootstrap and modern frameworks</li>
         </ul>
       </div>
     </section>
 
-    <!-- Soft Skills Section -->
     <section class="soft-skills">
       <div class="section-title">Professional Skills</div>
       <div class="section-content">
         <ul>
-          <li>Strong problem-solving abilities with a passion for learning and growth</li>
-          <li>Excellent communication skills, capable of conveying complex technical concepts clearly</li>
-          <li>Proven leadership and collaborative team experience in achieving project goals</li>
-          <li>Detail-oriented with a focus on high-quality code and maintaining best development practices</li>
+          <li>Problem-solving mindset and adaptability</li>
+          <li>Strong collaboration and communication skills</li>
+          <li>Attention to detail and code quality</li>
+          <li>Leadership and initiative in team environments</li>
         </ul>
       </div>
     </section>
 
-    <!-- Professional Experience Section -->
     <section class="experience">
       <div class="section-title">Professional Experience</div>
+
       <div class="experience-item">
         <h4>Procurement & Fibre Infrastructure Coordinator</h4>
         <p>4 Brothers Family Projects | 2021 – 2023</p>
         <ul>
-          <li>Led procurement operations for fiber optic infrastructure projects, ensuring timely and within-budget delivery</li>
-          <li>Coordinated team efforts to meet project goals while maintaining high-quality standards</li>
-          <li>Negotiated with vendors and managed relationships to secure optimal pricing and service delivery</li>
+          <li>Oversaw procurement and logistical coordination for fibre optic projects</li>
+          <li>Managed vendor relations, budget controls, and team performance</li>
         </ul>
       </div>
+
       <div class="experience-item">
         <h4>Missionary</h4>
         <p>The Church of Jesus Christ of Latter-day Saints | 2018 – 2020</p>
         <ul>
-          <li>Developed leadership skills through team-based projects and humanitarian initiatives</li>
-          <li>Mentored community members and facilitated training in personal development and leadership</li>
+          <li>Developed public speaking, interpersonal, and mentorship skills</li>
+          <li>Led training workshops and community outreach programs</li>
         </ul>
       </div>
+
       <div class="experience-item">
         <h4>Executive Secretary</h4>
         <p>The Church of Jesus Christ of Latter-day Saints - Bedfordview Stake | 2024 – 2025</p>
         <ul>
-          <li>Managed administrative duties for the church community, ensuring smooth operations and communications</li>
-          <li>Orchestrated events and activities, contributing to strong community engagement</li>
+          <li>Organized administrative workflows and stakeholder communications</li>
+          <li>Maintained meeting schedules, records, and event planning</li>
         </ul>
       </div>
     </section>
 
-    <!-- Education Section -->
     <section class="education">
       <div class="section-title">Education & Training</div>
+
       <div class="education-item">
         <h4>HyperionDev | Software Engineering Bootcamp</h4>
         <p>06/2023 – 01/2024</p>
         <ul>
-          <li>Mastered full-stack development technologies such as Python, Django, SQL/SQLite, and Docker</li>
-          <li>Completed practical, hands-on projects focusing on modern web application development</li>
+          <li>Covered Python, Django, SQL, Docker, Git, HTML, CSS, and Bootstrap</li>
+          <li>Completed multiple capstone projects involving real-world use cases</li>
         </ul>
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="projects">
       <div class="section-title">Notable Projects</div>
+
       <div class="project">
         <h4>E-commerce Platform</h4>
-        <p>Developed an e-commerce website with secure user authentication and payment processing, resulting in increased user engagement.</p>
+        <p>Built a secure, scalable online shopping site using Django and Docker.</p>
         <a href="https://github.com/mcebomnguni/e-commerce" target="_blank">View Project</a>
       </div>
+
       <div class="project">
         <h4>Task Management Application</h4>
-        <p>Created a task management app that allows users to create, update, and track tasks efficiently.</p>
+        <p>Created a user-friendly to-do app with CRUD features and clean UI.</p>
         <a href="https://github.com/mcebomnguni/todo-app" target="_blank">View Project</a>
       </div>
     </section>
 
-    <!-- Footer Section -->
     <footer>
       <p>&copy; 2025 Mcebo Mnguni. All Rights Reserved.</p>
     </footer>
   </div>
-
 </body>
 </html>
